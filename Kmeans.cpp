@@ -6,19 +6,6 @@ using namespace cv;
 
 int createMaskByKmeans(cv::Mat src, cv::Mat& mask);
 
-VideoCapture createInput(bool useCamera, std::string videoPath)
-{
-	//选择输入
-	VideoCapture capVideo;
-	if (useCamera) {
-		capVideo.open(0);
-	}
-	else {
-		capVideo.open(videoPath);
-	}
-	return capVideo;
-}
-
 void segColor()
 {
 
